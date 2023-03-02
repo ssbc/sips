@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2022 Andre 'Staltz' Medeiros
+
+SPDX-License-Identifier: CC-BY-4.0
+-->
+
 # Sharding math
 
 ## Abstract

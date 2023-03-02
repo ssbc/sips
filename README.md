@@ -6,7 +6,7 @@ This repository contains the specifications for the Secure Scuttlebutt (SSB) pro
 
 | SIP | Title | Date |
 |-----|-------|-------|
-| 1 | [SSB URI Specification](001.md) | 2022-10-01 |
+| 1 | [SSB URIs](001.md) | 2022-10-01 |
 | 2 | [Metafeeds](002.md) | 2021-10-11 |
 | 3 | [Index Feeds](003.md) | 2021-10-11 |
 | 4 | [Bendy Butt](004.md) | 2021-06-15 |

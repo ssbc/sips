@@ -34,6 +34,8 @@ Here are what those sections mean:
 
 **Title:** The title of your SIP. Typically a short description in maximum 8 words. Preferably should NOT contain the word "SSB" nor the word "specification".
 
+**License:** The license for your SIP **MUST** be [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/), in other words, "public domain". We want the "knowledge" of SSB to be a public asset.
+
 **Abstract:** A single paragraph that describes the problem your SIP addresses and a summary of the solution. Use at most 250 words.
 
 **Motivation:** A few paragraphs that give the context for this SIP. Why is this important? What is the problem? Use at most 1000 words.

@@ -18,8 +18,17 @@ Is the abstract short enough? Is the specification coherent and complete, are al
 
 Does it have a reference implementation? Is it possible to implement the SIP in a reasonable amount of time with current programming paradigms? Is the specification useful enough to understand how an implementation should work?
 
-## That's it
+## Approved
 
 Try not to make the review process too heavy! We want to encourage people to submit SIPs, and we want to make it easy for them to do so.
 
-## 
+## Reserve a SIP number
+
+Carefully check what is the latest SIP number, and reserve the next number for the SIP you are reviewing. Ask the author to:
+
+- Rename the file to the reserved number
+- Add a new entry to the table on README.md
+
+## Merge the pull request
+
+That's it!

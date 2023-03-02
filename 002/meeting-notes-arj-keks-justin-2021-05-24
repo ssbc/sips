@@ -1,0 +1,33 @@
+<!--
+SPDX-FileCopyrightText: 2021 Anders Rune Jensen
+
+SPDX-License-Identifier: CC-BY-4.0
+-->
+
+handshake between feeds - misunderstanding about being single device,
+need to clarify further. Maybe remove some of the examples.
+
+domain separation for main signing messages, look at sign in with ssb
+
+maybe a new incredibly simple feed format for meta feeds?
+
+related, maybe a different identifier, like
+%sdfasldkrf;skjdf;laksjdf=.cloaked for private groups versus
+@sdfasldkrf;skjdf;laksjdf=.ed25519 for current classic feeds
+
+keks thought it doesn't make sense to make a distinction between index
+feeds and claims. They should all just be claims. What happens if you
+have a broken implementation that creates broken index feeds?
+
+instead of using timestamp for nonce use random bytes
+
+the query language in
+https://github.com/ssb-ngi-pointer/ssb-secure-partial-replication-spec
+needs a proper spec. Maybe also a bit more general.
+
+meta feeds spec mentions subfeed-1 at one point, we probably should
+use the nonce instead for generating keys as they are unique.
+
+potential date for next meeting 15 June
+
+arj will send updated specs at the end of this week

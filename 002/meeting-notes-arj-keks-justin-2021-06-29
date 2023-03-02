@@ -1,0 +1,42 @@
+<!--
+SPDX-FileCopyrightText: 2021 Anders Rune Jensen
+
+SPDX-License-Identifier: CC-BY-4.0
+-->
+
+# Bendy butt spec
+
+State more clearly what exactly is encrypted
+
+DM self: could be done by generating a random key from the seed. No
+need to generate a new asymetric key. Could even be used as a group
+key.
+
+# Fusion identity
+
+Who signs what needs to be a lot clearer in the document, and also
+what the fusion identity key is used for.
+
+Talk about doing a general domain separation doc, maybe include it in
+the BFE spec?
+
+One way to avoid using the key to both private messages and signing
+would be to include a key in the init message.
+
+Another idea (probably better) would be to instead of signing in the
+proof of key step, then do a pre-image instead. Then when you invite
+someone, you include a hash of the pre-image and in entrust message
+you share this pre-image. Proof of key is then posting the same
+hash. That way you don't need to sign anything.
+
+Justin mention an idea where you password protect a public tombstone
+"key" and than later if the identity is compromised and you need to
+tombstone it, you could include some password derived information that
+would basically tell the world that you knew what the password was as
+a proof of knowledge. This would be more information when deciding on
+what the attest. You wouldn't want to disclose the password directly
+as that would tell people what kind of password style you might have.
+
+The was a question around exactly how attestation works. That probably
+needs to be tidied a bit to make it clear in the different use cases,
+how that would work.

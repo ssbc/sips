@@ -1,0 +1,63 @@
+<!--
+SPDX-FileCopyrightText: 2021 Anders Rune Jensen
+
+SPDX-License-Identifier: CC-BY-4.0
+-->
+
+---
+tags: ssb
+---
+
+# Call Notes Meta Feeds
+
+- arj, keks
+
+## Simpler Subfeed ID Generation
+
+Proof of Possession
+
+```
+MF: [
+  { content:{type: main, id: @sf0, author:@mf, nonce: <rand>, sig_sf: suf_sf.sig }, sig_mf:sig_mf.sig}
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+						 signed by subkey
+		^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+		signed by metakey
+]
+```
+
+Domain Separation of subkey and metakey signatures:
+
+sig_mf = sign(sk_mf, 0x00 || msg)
+sig_sf = sign(sk_sf, 0x01 || msg)
+
+-> no need to encode the tree depth
+
+## Non-Hierarchical Deterministic
+```
+seed           = rand(32 bytes) // maybe make this even a bit bigger, e.g. 64, 128 bytes
+mf_seed        = hkdf_expand(key=seed, info="ssb-meta-feed-seed-v1:metafeed")
+(mf_sk, mf_pk) = ed25519_gen_from_seed(mf_seed)
+
+sf_seed        = hkdf_expand(key=seed, info="ssb-meta-feed-seed-v1:subfeed-$pos")
+(sf_sk, sf_pk) = ed25519_gen_from_seed(sf_seed)
+
+
+// if you want to be able to recover keys generated non-hierarchically
+sf_enc_k       = hkdf_expand(key=seed, info="ssb-meta-feed-seed-v1:subfeed-keyenc-$pos")
+sf_sk_enc = enc(sf_enc_k, orig_sk)
+```
+
+then
+
+```
+MF: [
+  { content:{type: main, id: @sf0, author:@mf, nonce: <rand>, enc_sf_sk: <sf_sk_enc>, sig_sf: suf_sf.sig}, sig_mf:sig_mf.sig}
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+						 signed by subkey
+		^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+		signed by metakey
+]
+```
+
+but! selective forgettability is a good thing, and we lose it if everything can be learned from the main seed

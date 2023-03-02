@@ -1,0 +1,84 @@
+<!--
+SPDX-FileCopyrightText: 2021 Anders Rune Jensen
+
+SPDX-License-Identifier: CC-BY-4.0
+-->
+
+# Meta feeds & bendy butt spec
+
+Q: should we use a salt value for key derivation?
+
+K: yes, would probably be a good idea. Goes on to explain that it
+would be nice that something like the hmac key could also be derived
+from this, but okay to just use any key and one for the whole network.
+
+Q: Number of random bytes for seed input
+
+K: 32 bytes should be enough
+
+Q: Number of random bytes for nonce
+
+K: As very few keys will be generated one doesn't really need very
+much, we just need them to be unique.
+
+We ended up deciding that 32 bytes would probably also be a good
+number.
+
+Q: Put content & content signature in a box2 encrypted binary field
+
+K: yes
+
+There was a bit confusion about what payload signature and content
+signature ment and which keys signed what. Might be good with common
+terminology here.
+
+# Partial replication spec
+
+https://github.com/ssb-ngi-pointer/ssb-secure-partial-replication-spec
+
+Notes from Justin:
+
+Claims and Audits
+"...it MIGHT make sense for others to create claims and audit that these claims are indeed valid indexes."
+what is meant by MIGHT? Is this part of the protocol or just an idea? Can this step be omitted?
+
+
+"Because feeds are immutable, once you have verified a feed up until sequence x the past can never change."
+Who is verifying the claim? If bob is verifying Alice's feed, who gave Bob authority. Could Bob not verify until to sequence X, which would prevent Alice's feed from immutability? Ie. Alice could re-write the feed with Bob's help? Or is validation distributed amongst peers?
+
+
+"In order not to create too many verification messages, a new message should only be posted if claim is no longer valid."
+who is creating verification messages? Do I ask verification of my own messages, or do I ask to verify someone else's. If the claim is invalid, does the refer to reopening a claim? Or does this refer to validating a claim?
+
+
+"How often claims should be verified is at the discretion of the auditor."
+Who is the auditor? Who gives them the authority?
+
+
+"It is worth noting that it is limited what a malicious peer could do. The messages in a claim still needs to be signed by the author, so at worst messages can be left out."
+This still amounts to DoS, as messages could be prevented from circulating
+
+
+
+Notes from talk
+
+There were some question around who could audit, also who could change
+an audit (only self). That probably needs a bit of clarification.
+
+There was a strong need for a more detailed examples of invalid
+claims. Like what was valid. How can others look and this and see if
+they agree. Should this be machine readable?
+
+For audits only includes latestseq, what feed is that on? The index or
+indexed feed? Probably be better with both.
+
+We talked a bit about these being more like observables, if you only
+write when things change, how do you know if audits are stale? And
+should you only trust the audit up until latestseq?
+
+We talked a bit on the trust model (trustnet) and how to handle
+conflicting audits.
+
+Also talked about incentives, like if most of the network is light
+clients, who will audit? Will that centralise things? Touched on
+hybrid models where you replicate and audit feeds in hops 1.

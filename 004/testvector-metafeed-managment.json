@@ -1,0 +1,110 @@
+{
+  "Description": "A bunch of metafeed related messages with double signed posts. Two feeds get added and one of them gets revoked/tombstoned",
+  "Metadata": [
+    {
+      "Name": "Seed for Metafeed KeyPair",
+      "HexString": "7365633073656330736563307365633073656330736563307365633073656330"
+    },
+    {
+      "Name": "subfeed1 nonce",
+      "HexString": "2323232323232323232323232323232323232323232323232323232323232323"
+    },
+    {
+      "Name": "subfeed1 author",
+      "Feed": "@XWQputsvDZ/ZLvNAHPRsTMG/01neaZ0c3twDMOT5p+A=.ed25519"
+    },
+    {
+      "Name": "subfeed2 nonce",
+      "HexString": "4242424242424242424242424242424242424242424242424242424242424242"
+    },
+    {
+      "Name": "subfeed2 author",
+      "Feed": "@xQrDhN1BG0ozoCeH+So6X6MMI5pTmr0hz8jHlU/BUXA=.ggfeed-v1"
+    }
+  ],
+  "Entries": [
+    {
+      "EncodedData": "6c6c33343a00034ee0fb86402b717a3bc4840fe11f7301b8df44a365987ac3a135ec0e0549f70469316533343a010400000000000000000000000000000000000000000000000000000000000000006930656c6431313a66656564707572706f736531343a06006d61696e2064656661756c74383a6d6574616665656433343a00034ee0fb86402b717a3bc4840fe11f7301b8df44a365987ac3a135ec0e0549f704353a6e6f6e636533323a2323232323232323232323232323232323232323232323232323232323232323373a7375626665656433343a00005d6429badb2f0d9fd92ef3401cf46c4cc1bfd359de699d1cdedc0330e4f9a7e0373a74616e676c657364383a6d6574616665656464383a70726576696f7573323a0602343a726f6f74323a06026565343a7479706531343a06006d657461666565642f6164646536363a0400d934193e07461cad45f4447f3aacac44cd02ff22781916c4527f7e98383538f8f19cae67f44165bf1d1f42ecc293528c2b1c666ff39ce993d39670044444b80b656536363a040081bc0f370b97189d7efe0da8018aac2ae076968470179051e1ff001adfb66ffcb0ecf3e23e005c2a989e9f84e9ecdfec4c7bdfa0afec4694768cc17318bf610b65",
+      "Key": "%K9TPrTAwY4etDpOcfd1C3EVKRScfWp+FZDQp/9rwwNA=.bbmsg-v1",
+      "Author": "@TuD7hkArcXo7xIQP4R9zAbjfRKNlmHrDoTXsDgVJ9wQ=.bbfeed-v1",
+      "Sequence": 1,
+      "Previous": "%AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=.bbmsg-v1",
+      "Timestamp": 0,
+      "HighlevelContent": [
+        {
+          "type": "metafeed/add",
+          "feedpurpose": "main default",
+          "subfeed": "@XWQputsvDZ/ZLvNAHPRsTMG/01neaZ0c3twDMOT5p+A=.ed25519",
+          "metafeed": "@TuD7hkArcXo7xIQP4R9zAbjfRKNlmHrDoTXsDgVJ9wQ=.bbfeed-v1",
+          "nonce": "IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM=",
+          "tangles": {
+            "metafeed": {
+              "root": null,
+              "previous": null
+            }
+          }
+        },
+        {
+          "Name": "subfeed signature",
+          "HexString": "0400d934193e07461cad45f4447f3aacac44cd02ff22781916c4527f7e98383538f8f19cae67f44165bf1d1f42ecc293528c2b1c666ff39ce993d39670044444b80b"
+        }
+      ],
+      "Signature": "040081bc0f370b97189d7efe0da8018aac2ae076968470179051e1ff001adfb66ffcb0ecf3e23e005c2a989e9f84e9ecdfec4c7bdfa0afec4694768cc17318bf610b"
+    },
+    {
+      "EncodedData": "6c6c33343a00034ee0fb86402b717a3bc4840fe11f7301b8df44a365987ac3a135ec0e0549f70469326533343a01042bd4cfad30306387ad0e939c7ddd42dc454a45271f5a9f85643429ffdaf0c0d06930656c6431313a66656564707572706f736531343a06006578706572696d656e74616c383a6d6574616665656433343a00034ee0fb86402b717a3bc4840fe11f7301b8df44a365987ac3a135ec0e0549f704353a6e6f6e636533323a4242424242424242424242424242424242424242424242424242424242424242373a7375626665656433343a0001c50ac384dd411b4a33a02787f92a3a5fa30c239a539abd21cfc8c7954fc15170373a74616e676c657364383a6d6574616665656464383a70726576696f7573323a0602343a726f6f74323a06026565343a7479706531343a06006d657461666565642f6164646536363a040004cfe9bdcbd10453b922ceeeae32a7aac0c4b1ace2c4d3f02c0f36fc991a25859243bcce90ddb40b216266e114f1fd3c68a7b8c62f6452ba9a03334135479109656536363a04008b182bc4d5bf990912de216f2236f26fc17f3e5fdafa27fc73c956871325d417ff3edd24ec442d20d4f59794cfc8fe0677875a7b8fe4dcb58ee431f07aaa1f0865",
+      "Key": "%lfa1JyrJZMHJDm1MC9MHo3HHu+xopw0+YgoYLLCsMSE=.bbmsg-v1",
+      "Author": "@TuD7hkArcXo7xIQP4R9zAbjfRKNlmHrDoTXsDgVJ9wQ=.bbfeed-v1",
+      "Sequence": 2,
+      "Previous": "%K9TPrTAwY4etDpOcfd1C3EVKRScfWp+FZDQp/9rwwNA=.bbmsg-v1",
+      "Timestamp": 0,
+      "HighlevelContent": [
+        {
+          "type": "metafeed/add",
+          "feedpurpose": "experimental",
+          "subfeed": "@xQrDhN1BG0ozoCeH+So6X6MMI5pTmr0hz8jHlU/BUXA=.ggfeed-v1",
+          "metafeed": "@TuD7hkArcXo7xIQP4R9zAbjfRKNlmHrDoTXsDgVJ9wQ=.bbfeed-v1",
+          "nonce": "QkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkI=",
+          "tangles": {
+            "metafeed": {
+              "root": null,
+              "previous": null
+            }
+          }
+        },
+        {
+          "Name": "subfeed2 signature",
+          "HexString": "040004cfe9bdcbd10453b922ceeeae32a7aac0c4b1ace2c4d3f02c0f36fc991a25859243bcce90ddb40b216266e114f1fd3c68a7b8c62f6452ba9a03334135479109"
+        }
+      ],
+      "Signature": "04008b182bc4d5bf990912de216f2236f26fc17f3e5fdafa27fc73c956871325d417ff3edd24ec442d20d4f59794cfc8fe0677875a7b8fe4dcb58ee431f07aaa1f08"
+    },
+    {
+      "EncodedData": "6c6c33343a00034ee0fb86402b717a3bc4840fe11f7301b8df44a365987ac3a135ec0e0549f70469336533343a010495f6b5272ac964c1c90e6d4c0bd307a371c7bbec68a70d3e620a182cb0ac31216930656c64373a7375626665656433343a00005d6429badb2f0d9fd92ef3401cf46c4cc1bfd359de699d1cdedc0330e4f9a7e0373a74616e676c657364383a6d6574616665656464383a70726576696f75736c33343a01042bd4cfad30306387ad0e939c7ddd42dc454a45271f5a9f85643429ffdaf0c0d065343a726f6f7433343a01042bd4cfad30306387ad0e939c7ddd42dc454a45271f5a9f85643429ffdaf0c0d06565343a7479706532303a06006d657461666565642f746f6d6273746f6e656536363a04006d30bd087a9239b4d4c728358222c8369f70c5e12c70d17d8e1dbac2e6fe2541b94edf234370921e73537e9e53fac070b3a5c39bd1969b870ec06bd9e79adb01656536363a04000c74a447cc421054e4fb413db7c6f1ccb0abb9b178324a4d3171d32593a1142c02be28e445df8df25e2b6a56cfbc74e67f687c57497a5a9cbabbe1baa766c70b65",
+      "Key": "%d9hWhAE4KOPK2aWGtVOL7oi3OqErPcs59IpOU2Q4CGE=.bbmsg-v1",
+      "Author": "@TuD7hkArcXo7xIQP4R9zAbjfRKNlmHrDoTXsDgVJ9wQ=.bbfeed-v1",
+      "Sequence": 3,
+      "Previous": "%lfa1JyrJZMHJDm1MC9MHo3HHu+xopw0+YgoYLLCsMSE=.bbmsg-v1",
+      "Timestamp": 0,
+      "HighlevelContent": [
+        {
+          "type": "metafeed/tombstone",
+          "subfeed": "@XWQputsvDZ/ZLvNAHPRsTMG/01neaZ0c3twDMOT5p+A=.ed25519",
+          "tangles": {
+            "metafeed": {
+              "root": "%K9TPrTAwY4etDpOcfd1C3EVKRScfWp+FZDQp/9rwwNA=.bbmsg-v1",
+              "previous": [
+                "%K9TPrTAwY4etDpOcfd1C3EVKRScfWp+FZDQp/9rwwNA=.bbmsg-v1"
+              ]
+            }
+          }
+        },
+        {
+          "Name": "subfeed1 signature",
+          "HexString": "04006d30bd087a9239b4d4c728358222c8369f70c5e12c70d17d8e1dbac2e6fe2541b94edf234370921e73537e9e53fac070b3a5c39bd1969b870ec06bd9e79adb01"
+        }
+      ],
+      "Signature": "04000c74a447cc421054e4fb413db7c6f1ccb0abb9b178324a4d3171d32593a1142c02be28e445df8df25e2b6a56cfbc74e67f687c57497a5a9cbabbe1baa766c70b"
+    }
+  ]
+}

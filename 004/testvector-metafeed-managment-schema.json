@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "https://github.com/ssb-ngi-pointer/ssb-meta-feed-spec#vectors",
+  "type": "object",
+  "properties": {
+    "Description": {
+      "description": "Freeform description of the contents of the vector file",
+      "type": "string"
+    },
+    "Metadata": {
+      "description": "addtional metadata needed to create the Entries",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "description": "what this piece of metadata contains"
+          },
+          "HexString": {
+            "type": "string",
+            "description": "a string of hexadecimal characters, representing some binary data",
+            "pattern": "^[0-9a-f]+$"
+          },
+          "Feed": {
+            "description": "addtional feed references/public key, as ssb-ref",
+            "type": "string",
+            "pattern": "^@[0-9a-zA-Z]+"
+          }
+        }
+      }
+    },
+    "Entries": {
+      "description": "the entries on a the example feed",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Author": {
+            "description": "the authors public key, as an ssb-ref",
+            "type": "string",
+            "pattern": "^@[0-9a-zA-Z]+=.bbfeed-v1$"
+          },
+          "EncodedData": {
+            "type": "string",
+            "description": "the bencoded entry as a string of hexadecimal characters, representing binary data",
+            "pattern": "^[0-9a-f]+$"
+          },
+          "Sequence": {
+            "type": "integer",
+            "description": "the sequence number of that entry"
+          },
+          "Previous": {
+            "description": "the previous message hash, as a ssb-ref (its encoded as TFK when bencoded)",
+            "type": "string",
+            "pattern": "^%[0-9a-zA-Z+/]+=.bbmsg-v1$"
+          },
+          "Timestamp": {
+            "type": "integer"
+          },
+          "HighlevelContent": {
+            "description": "this contains a JSON version of the bencoded data, for a highlevel comparision. They all follow the same schema tho. The 1st object in the array is the content portion. The 2nd object is containing the signature bytes, created with the subfeeds keypair"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+# Reviewing a new SIP
+
+Thank you for volunteering to read and review a new SIP! This is a very important part of the process. Here are a couple criteria you should keep in mind when reviewing pull requests.
+
+## 1. Is it related to SSB?
+
+Generally speaking, SIPs can be "anything" SSB related. Avoid judging whether a SIP is "good" or "bad" based on whether you think it's a good idea or not. Instead, focus on whether it's related to SSB, and whether the SIPs Specification section *makes sense* considering its Motivation section.
+
+Typically, all SIPs should have other SIPs as normative references. We don't want to accept SIPs that are out of scope, and this can be either low-level tools that are generic and apply to other systems, or too high-level such as protocols internal to a certain application.
+
+## 2. Is it well written?
+
+Does it have all the "required" sections (see [CONTRIBUTING.md](CONTRIBUTING.md))? Is the specification section clear and concise? Does it have a reference implementation?
+
+Is the abstract short enough? Is the specification coherent and complete, are all corner cases taken into account?
+
+## 3. Is it implementable?
+
+Does it have a reference implementation? Is it possible to implement the SIP in a reasonable amount of time with current programming paradigms? Is the specification useful enough to understand how an implementation should work?
+
+## That's it
+
+Try not to make the review process too heavy! We want to encourage people to submit SIPs, and we want to make it easy for them to do so.
+
+## 

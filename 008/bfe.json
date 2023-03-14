@@ -1,0 +1,75 @@
+[
+  {
+    "code": 0,
+    "type": "feed",
+    "formats": [
+      { "code": 0, "format": "classic",       "data_length": 32, "sigil": "@", "suffix": ".ed25519" },
+      { "code": 1, "format": "gabbygrove-v1", "data_length": 32 },
+      { "code": 2, "format": "bamboo",        "data_length": 32 },
+      { "code": 3, "format": "bendybutt-v1",  "data_length": 32 },
+      { "code": 4, "format": "buttwoo-v1",    "data_length": 32 },
+      { "code": 5, "format": "indexed-v1",    "data_length": 32 }
+    ]
+  },
+  {
+    "code": 1,
+    "type": "message",
+    "formats": [
+      { "code": 0, "format": "classic",      "data_length": 32, "sigil": "%", "suffix": ".sha256" },
+      { "code": 1, "format": "gabbygrove-v1","data_length": 32 },
+      { "code": 2, "format": "cloaked",      "data_length": 32, "sigil": "%", "suffix": ".cloaked" },
+      { "code": 3, "format": "bamboo",       "data_length": 64 },
+      { "code": 4, "format": "bendybutt-v1", "data_length": 32 },
+      { "code": 5, "format": "buttwoo-v1",   "data_length": 32 },
+      { "code": 6, "format": "indexed-v1",   "data_length": 32 }
+    ]
+  },
+  {
+    "code": 2,
+    "type": "blob",
+    "formats": [
+      { "code": 0, "format": "classic", "data_length": 32, "sigil": "&", "suffix": ".sha256" }
+    ]
+  },
+  {
+    "code": 3,
+    "type": "encryption-key",
+    "formats": [
+      { "code": 0, "format": "box2-dm-dh", "data_length": 32 },
+      { "code": 1, "format": "box2-pobox-dh", "data_length": 32 }
+    ]
+  },
+  {
+    "code": 4,
+    "type": "signature",
+    "formats": [
+      { "code": 0, "format": "msg-ed25519", "data_length": 64, "signature_length": 64, "suffix": ".sig.ed25519" }
+    ]
+  },
+  {
+    "code": 5,
+    "type": "encrypted",
+    "formats": [
+      { "code": 0, "format": "box1", "suffix": ".box" },
+      { "code": 1, "format": "box2", "suffix": ".box2" }
+    ]
+  },
+  {
+    "code": 6,
+    "type": "generic",
+    "formats": [
+      { "code": 0, "format": "string-UTF8" },
+      { "code": 1, "format": "boolean" },
+      { "code": 2, "format": "nil" },
+      { "code": 3, "format": "any-bytes" }
+    ]
+  },
+  {
+    "code": 7,
+    "type": "identity",
+    "formats": [
+      { "code": 0, "format": "po-box" , "data_length": 32 },
+      { "code": 1, "format": "group", "data_length": 32 }
+    ]
+  }
+]

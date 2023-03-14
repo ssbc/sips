@@ -1,0 +1,29 @@
+{
+  "name": "ssb-bfe-spec",
+  "description": "Binary Field Encodings (BFE) spec for Secure Scuttlebutt (SSB)",
+  "version": "0.8.0",
+  "homepage": "https://github.com/ssbc/ssb-bfe-spec",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ssbc/ssb-bfe-spec.git"
+  },
+  "main": "bfe.json",
+  "files": [
+    "bfe.json"
+  ],
+  "scripts": {
+    "test": "tape *.test.js | tap-spec",
+    "prepublishOnly": "npm run test"
+  },
+  "author": "public-domain",
+  "contributors": [
+    "Anders Rune Jensen <arj03@protonmail.ch>",
+    "Andre Staltz <contact@staltz.com>",
+    "Mix Irving <mix@protozoa.nz>"
+  ],
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "tap-spec": "^5.0.0",
+    "tape": "^5.3.1"
+  }
+}

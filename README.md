@@ -14,6 +14,7 @@ This repository contains the specifications for the Secure Scuttlebutt (SSB) pro
 | 6 | [HTTP Authentication](006.md) | 2021-04-26 |
 | 7 | [Rooms 2](007.md) | 2022-10-10 |
 | 8 | [Binary Field Encodings](008.md) | 2022-10-02 |
+| 9 | [Tangles](009.md) | 2022-03-23 |
 | 9 | [Binary Field Encodings](008.md) | 2022-10-02 |
 | 10 | [Threads](010.md) | 2023-03-27 |
 

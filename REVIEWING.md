@@ -10,13 +10,22 @@ Typically, all SIPs should have other SIPs as normative references. We don't wan
 
 ## 2. Is it well written?
 
-Does it have all the "required" sections (see [CONTRIBUTING.md](CONTRIBUTING.md))? Is the specification section clear and concise? Does it have a reference implementation?
+- Does it have all the "required" sections (see [CONTRIBUTING.md](CONTRIBUTING.md))?
+- Is the abstract short and descriptive?
+- Is the specification section *clear and concise*, i.e. long enough to prescribe how implementations should behave?
+- Is the specification section *coherent*, i.e. internally consistent with itself?
+- Is the specification section *complete*, i.e. are all implementation corner cases taken into account?
+- Does it list a reference implementation?
 
-Is the abstract short enough? Is the specification coherent and complete, are all corner cases taken into account?
+If you can say yes to all these questions, then the SIP is well written!
 
 ## 3. Is it implementable?
 
-Does it have a reference implementation? Is it possible to implement the SIP in a reasonable amount of time with current programming paradigms? Is the specification useful enough to understand how an implementation should work?
+- Is it possible to implement the SIP in a reasonable amount of time with current programming paradigms?
+- Is the specification useful enough to understand how an implementation should work?
+- Does the reference implementation match the specification?
+
+If you can say yes to all these questions, then the SIP is implementable!
 
 ## Approved
 
